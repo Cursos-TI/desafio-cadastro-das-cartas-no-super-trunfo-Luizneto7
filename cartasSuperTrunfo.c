@@ -66,21 +66,18 @@ int main()
 
     printf("******* Hora do combate *******\n\n");
 
-    printf("Nesta fase do jogo as cartas serão comparadas e o resultado aparecerá como 1 para a CARTA I e 0 para a CARTA II.\n\n");
+    // Implementação da lógica de comparação de apenas um atributo de cada carta e exibição do resultado mencionando o vencedor baseado na situação.
 
-    printf("******* Os resultados aparecerão ao lado do atributo comparado *******\n\n\n");
-
-    printf("População: %d\n", population1 > population2);
-    printf("Pontos Turísticos: %d\n", touristAttraction1 > touristAttraction2);
-    printf("Área: %d\n", area1 > area2);
-    printf("PIB: %d\n", pib1 > pib2);
-    printf("PIB Per Capita: %d\n", pibPerCapita1 > pibPerCapita2);
-    printf("Densidade Populacional: %d\n", populationDensity1 < populationDensity2);
-    printf("Super Poder: %d\n", superPower1 > superPower2);
+    if (population1 > population2)
+    {
+        printf("A carta 1 venceu! (Atributo comparado: População)\n\n\nPopulação 1: %.2f\n População 2: %.2f", population1, population2);
+    }
+    else
+    {
+        printf("A carta 2 venceu! (Atributo comparado: População)\n\n\nPopulação 1: %.2f\n População 2: %.2f", population1, population2);
+    };
 
     printf("\n\n******* Fim do embate *******\n\n");
-
-    printf("Agora é com você! Confira os resultados acima e declare o vencedor desta rodada.\n\n");
 
     return 0;
 }
